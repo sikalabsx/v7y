@@ -1,77 +1,100 @@
-# This is an example .goreleaser.yml file with some sensible defaults.
-# Make sure to check the documentation at https://goreleaser.com
+version: 2
 
-# The lines below are called `modelines`. See `:help modeline`
-# Feel free to remove those if you don't want/need to use them.
-# yaml-language-server: $schema=https://goreleaser.com/static/schema.json
-# vim: set ts=2 sw=2 tw=0 fo=cnqoj
-
-project_name: vaul7y
-version: 1
+project_name: v7y
 
 before:
   hooks:
-    # You may remove this if you don't use go modules.
+    - rm -rf ./dist
     - go mod tidy
-
+    - git push
+    - git push --tags
 
 builds:
-  - binary: vaul7y
+  - id: v7y
     env:
       - CGO_ENABLED=0
+    mod_timestamp: "{{ .CommitTimestamp }}"
+    flags:
+      - -trimpath
+    ldflags:
+      - -s
+      - -w
+      - -X main.version={{.Version}}
     goos:
-      - windows
-      - darwin
       - linux
+      - darwin
     goarch:
       - amd64
       - arm64
-    goarm:
-      - 6
-      - 7
-    ldflags:
-      - -s -w -X "main.version={{ .Tag }}"
-    dir: ./cmd/vaul7y/
-
+    binary: v7y
 
 archives:
-  - name_template: >-
-      {{ .ProjectName }}_{{ .Version }}_
-      {{- if eq .Os "darwin" }}Darwin
-      {{- else if eq .Os "linux" }}Linux
-      {{- else if eq .Os "windows" }}Windows
-      {{- else }}{{ .Os }}{{ end }}_
-      {{- if eq .Arch "amd64" }}x86_64
-      {{- else if eq .Arch "386" }}i386
-      {{- else }}{{ .Arch }}{{ end }}
+  - formats: [ "tar.gz" ]
+    name_template: "{{ .ProjectName }}_v{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    ids:
+      - v7y
+
+release:
+  prerelease: auto
 
 checksum:
-  name_template: 'checksums.txt'
-
-snapshot:
-  name_template: "{{ incpatch .Version }}-next"
-
-changelog:
-  sort: asc
-  filters:
-    exclude:
-      - '^docs:'
-      - '^test:'
-
-universal_binaries:
-  - replace: true
+  name_template: "{{ .ProjectName }}_checksums.txt"
+  algorithm: sha256
 
 brews:
-  - name: vaul7y
-    homepage: https://github.com/dkyanakiev/vaul7y
-    description: "A simple terminal application/TUI for interacting with HashiCorp Vault."
-    folder: Formula
-    commit_author:
-      name: "Dimitar Yanakiev"
-      email: "dkyanakiev@gmail.com"
-    commit_msg_template: "Brew formula update for {{ .ProjectName }} version {{ .Tag }}"
+  -
+    name: v7y
     repository:
-      owner: dkyanakiev
+      owner: sikalabsx
       name: homebrew-tap
-      branch: main
-      token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
+    skip_upload: auto
+    homepage: https://github.com/sikalabsx/v7y
+    url_template: "https://github.com/sikalabsx/v7y/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
+    directory: Formula
+    caveats: "How to use this binary: https://github.com/sikalabsx/v7y"
+    description: "v7y"
+    install: |
+      bin.install "v7y"
+    test: |
+      system "#{bin}/v7y --version"
+
+dockers:
+    -
+      goos: linux
+      goarch: amd64
+      image_templates:
+        - "ghcr.io/sikalabsx/v7y:{{ .Tag }}"
+      dockerfile: Dockerfile.goreleaser
+      ids:
+        - v7y
+      build_flag_templates:
+        - "--platform=linux/amd64"
+        - "--label=org.opencontainers.image.created={{.Date}}"
+        - "--label=org.opencontainers.image.title={{.ProjectName}}"
+        - "--label=org.opencontainers.image.revision={{.FullCommit}}"
+        - "--label=org.opencontainers.image.version={{.Version}}"
+        - "--label=org.label-schema.schema-version=1.0"
+        - "--label=org.label-schema.version={{.Version}}"
+        - "--label=org.label-schema.name={{.ProjectName}}"
+        - "--label=com.github.actions.name={{.ProjectName}}"
+        - "--label=repository=https://github.com/sikalabsx/v7y"
+        - "--label=maintainer=Ondrej Sika <ondrej@sika.io>"
+    - goos: linux
+      goarch: arm64
+      image_templates:
+        - "ghcr.io/sikalabsx/v7y:{{ .Tag }}-arm64v8"
+      dockerfile: Dockerfile.goreleaser.arm64v8
+      ids:
+        - v7y
+      build_flag_templates:
+        - "--platform=linux/arm64"
+        - "--label=org.opencontainers.image.created={{.Date}}"
+        - "--label=org.opencontainers.image.title={{.ProjectName}}"
+        - "--label=org.opencontainers.image.revision={{.FullCommit}}"
+        - "--label=org.opencontainers.image.version={{.Version}}"
+        - "--label=org.label-schema.schema-version=1.0"
+        - "--label=org.label-schema.version={{.Version}}"
+        - "--label=org.label-schema.name={{.ProjectName}}"
+        - "--label=com.github.actions.name={{.ProjectName}}"
+        - "--label=repository=https://github.com/sikalabsx/v7y"
+        - "--label=maintainer=Ondrej Sika <ondrej@sika.io>"
