@@ -1,0 +1,3 @@
+FROM debian:13-slim
+LABEL org.opencontainers.image.source="https://github.com/sikalabsx/v7y"
+COPY v7y /usr/local/bin/
