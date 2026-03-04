@@ -34,7 +34,7 @@ func main() {
 	}
 
 	if opts.Version {
-		fmt.Println("vaul7y", strings.TrimPrefix(version, "v"))
+		fmt.Println("v7y", strings.TrimPrefix(version, "v"))
 		os.Exit(0)
 	}
 
