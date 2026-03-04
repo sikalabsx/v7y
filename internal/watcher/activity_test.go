@@ -3,7 +3,7 @@ package watcher_test
 import (
 	"testing"
 
-	"github.com/dkyanakiev/vaulty/internal/watcher"
+	"github.com/sikalabsx/v7y/internal/watcher"
 	"github.com/stretchr/testify/require"
 )
 

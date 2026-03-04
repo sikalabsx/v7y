@@ -4,9 +4,9 @@ package watcherfakes
 import (
 	"sync"
 
-	"github.com/dkyanakiev/vaulty/internal/models"
-	"github.com/dkyanakiev/vaulty/internal/watcher"
 	"github.com/hashicorp/vault/api"
+	"github.com/sikalabsx/v7y/internal/models"
+	"github.com/sikalabsx/v7y/internal/watcher"
 )
 
 type FakeVault struct {

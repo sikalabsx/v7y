@@ -1,9 +1,9 @@
 package component
 
 import (
-	"github.com/dkyanakiev/vaulty/tui/primitives"
 	"github.com/gdamore/tcell/v2"
 	"github.com/rivo/tview"
+	"github.com/sikalabsx/v7y/tui/primitives"
 )
 
 // Not currently used. Might need modification to reuse this for both paths and policies.

@@ -4,9 +4,9 @@ package componentfakes
 import (
 	"sync"
 
-	"github.com/dkyanakiev/vaulty/tui/component"
 	tcell "github.com/gdamore/tcell/v2"
 	"github.com/rivo/tview"
+	"github.com/sikalabsx/v7y/tui/component"
 )
 
 type FakeTable struct {

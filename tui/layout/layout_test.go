@@ -3,8 +3,8 @@ package layout_test
 import (
 	"testing"
 
-	"github.com/dkyanakiev/vaulty/tui/layout"
 	"github.com/rivo/tview"
+	"github.com/sikalabsx/v7y/tui/layout"
 	"github.com/stretchr/testify/require"
 )
 

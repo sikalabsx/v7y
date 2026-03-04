@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/dkyanakiev/vaulty/internal/models"
 	"github.com/hashicorp/vault/api"
+	"github.com/sikalabsx/v7y/internal/models"
 )
 
 func (v *Vault) ListMounts() (map[string]*models.MountOutput, error) {

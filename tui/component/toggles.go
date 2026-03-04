@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"strconv"
 
-	primitive "github.com/dkyanakiev/vaulty/tui/primitives"
-	"github.com/dkyanakiev/vaulty/tui/styles"
 	"github.com/rivo/tview"
 	"github.com/rs/zerolog"
+	primitive "github.com/sikalabsx/v7y/tui/primitives"
+	"github.com/sikalabsx/v7y/tui/styles"
 )
 
 type TogglesInfo struct {

@@ -1,10 +1,10 @@
 package view
 
 import (
-	"github.com/dkyanakiev/vaulty/internal/models"
-	"github.com/dkyanakiev/vaulty/tui/component"
 	"github.com/gdamore/tcell/v2"
 	"github.com/rivo/tview"
+	"github.com/sikalabsx/v7y/internal/models"
+	"github.com/sikalabsx/v7y/tui/component"
 )
 
 func (v *View) Mounts() {

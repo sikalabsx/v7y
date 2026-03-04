@@ -4,9 +4,9 @@ package componentfakes
 import (
 	"sync"
 
-	"github.com/dkyanakiev/vaulty/tui/component"
-	"github.com/dkyanakiev/vaulty/tui/primitives"
 	"github.com/rivo/tview"
+	"github.com/sikalabsx/v7y/tui/component"
+	"github.com/sikalabsx/v7y/tui/primitives"
 )
 
 type FakeSelector struct {

@@ -4,8 +4,8 @@ package componentfakes
 import (
 	"sync"
 
-	"github.com/dkyanakiev/vaulty/tui/component"
 	"github.com/rivo/tview"
+	"github.com/sikalabsx/v7y/tui/component"
 )
 
 type FakeDropDown struct {

@@ -3,11 +3,11 @@ package view
 import (
 	"sync"
 
-	"github.com/dkyanakiev/vaulty/internal/models"
-	"github.com/dkyanakiev/vaulty/internal/state"
-	"github.com/dkyanakiev/vaulty/tui/component"
-	"github.com/dkyanakiev/vaulty/tui/layout"
 	"github.com/rs/zerolog"
+	"github.com/sikalabsx/v7y/internal/models"
+	"github.com/sikalabsx/v7y/internal/state"
+	"github.com/sikalabsx/v7y/tui/component"
+	"github.com/sikalabsx/v7y/tui/layout"
 )
 
 const (

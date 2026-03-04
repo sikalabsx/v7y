@@ -4,11 +4,11 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/dkyanakiev/vaulty/tui/component"
-	"github.com/dkyanakiev/vaulty/tui/component/componentfakes"
 	"github.com/gdamore/tcell/v2"
 	"github.com/hashicorp/vault/api"
 	"github.com/rivo/tview"
+	"github.com/sikalabsx/v7y/tui/component"
+	"github.com/sikalabsx/v7y/tui/component/componentfakes"
 	"github.com/stretchr/testify/require"
 )
 

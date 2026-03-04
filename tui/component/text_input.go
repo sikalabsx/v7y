@@ -1,8 +1,8 @@
 package component
 
 import (
-	"github.com/dkyanakiev/vaulty/tui/primitives"
 	"github.com/rivo/tview"
+	"github.com/sikalabsx/v7y/tui/primitives"
 )
 
 const textPlaceholder = "(hit enter or esc to leave)"

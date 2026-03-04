@@ -4,8 +4,8 @@ package vaultfakes
 import (
 	"sync"
 
-	"github.com/dkyanakiev/vaulty/internal/vault"
 	"github.com/hashicorp/vault/api"
+	"github.com/sikalabsx/v7y/internal/vault"
 )
 
 type FakeSys struct {

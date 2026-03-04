@@ -1,9 +1,9 @@
 package state
 
 import (
-	"github.com/dkyanakiev/vaulty/internal/models"
 	"github.com/hashicorp/vault/api"
 	"github.com/rivo/tview"
+	"github.com/sikalabsx/v7y/internal/models"
 )
 
 type State struct {

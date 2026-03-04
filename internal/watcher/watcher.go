@@ -3,10 +3,10 @@ package watcher
 import (
 	"time"
 
-	"github.com/dkyanakiev/vaulty/internal/models"
-	"github.com/dkyanakiev/vaulty/internal/state"
 	"github.com/hashicorp/vault/api"
 	"github.com/rs/zerolog"
+	"github.com/sikalabsx/v7y/internal/models"
+	"github.com/sikalabsx/v7y/internal/state"
 )
 
 //go:generate counterfeiter . Activities

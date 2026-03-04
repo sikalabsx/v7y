@@ -3,8 +3,8 @@ package component
 import (
 	"fmt"
 
-	primitive "github.com/dkyanakiev/vaulty/tui/primitives"
 	"github.com/rivo/tview"
+	primitive "github.com/sikalabsx/v7y/tui/primitives"
 )
 
 const searchPlaceholder = "(hit esc to leave the filter)"

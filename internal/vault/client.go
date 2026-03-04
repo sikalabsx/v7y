@@ -3,10 +3,10 @@ package vault
 import (
 	"context"
 
-	"github.com/dkyanakiev/vaulty/internal/config"
-	"github.com/dkyanakiev/vaulty/internal/models"
 	"github.com/hashicorp/vault/api"
 	"github.com/rs/zerolog"
+	"github.com/sikalabsx/v7y/internal/config"
+	"github.com/sikalabsx/v7y/internal/models"
 )
 
 //go:generate counterfeiter . Client

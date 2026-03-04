@@ -1,4 +1,4 @@
-module github.com/dkyanakiev/vaulty
+module github.com/sikalabsx/v7y
 
 go 1.21
 

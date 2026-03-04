@@ -3,10 +3,10 @@ package view
 import (
 	"fmt"
 
-	"github.com/dkyanakiev/vaulty/internal/models"
-	"github.com/dkyanakiev/vaulty/tui/component"
-	"github.com/dkyanakiev/vaulty/tui/styles"
 	"github.com/gdamore/tcell/v2"
+	"github.com/sikalabsx/v7y/internal/models"
+	"github.com/sikalabsx/v7y/tui/component"
+	"github.com/sikalabsx/v7y/tui/styles"
 )
 
 func (v *View) Init(version string) {

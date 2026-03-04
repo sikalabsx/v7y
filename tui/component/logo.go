@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	primitive "github.com/dkyanakiev/vaulty/tui/primitives"
 	"github.com/rivo/tview"
+	primitive "github.com/sikalabsx/v7y/tui/primitives"
 )
 
 var LogoASCII = []string{

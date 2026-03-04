@@ -7,15 +7,15 @@ import (
 	"strings"
 	"time"
 
-	"github.com/dkyanakiev/vaulty/internal/config"
-	"github.com/dkyanakiev/vaulty/internal/state"
-	"github.com/dkyanakiev/vaulty/internal/vault"
-	"github.com/dkyanakiev/vaulty/internal/watcher"
-	"github.com/dkyanakiev/vaulty/tui/component"
-	"github.com/dkyanakiev/vaulty/tui/view"
 	"github.com/gdamore/tcell/v2"
 	"github.com/jessevdk/go-flags"
 	"github.com/rivo/tview"
+	"github.com/sikalabsx/v7y/internal/config"
+	"github.com/sikalabsx/v7y/internal/state"
+	"github.com/sikalabsx/v7y/internal/vault"
+	"github.com/sikalabsx/v7y/internal/watcher"
+	"github.com/sikalabsx/v7y/tui/component"
+	"github.com/sikalabsx/v7y/tui/view"
 )
 
 var version = "dev"

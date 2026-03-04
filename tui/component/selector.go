@@ -1,9 +1,9 @@
 package component
 
 import (
-	"github.com/dkyanakiev/vaulty/tui/primitives"
 	"github.com/gdamore/tcell/v2"
 	"github.com/rivo/tview"
+	"github.com/sikalabsx/v7y/tui/primitives"
 )
 
 const pageNameSelector = "selector"

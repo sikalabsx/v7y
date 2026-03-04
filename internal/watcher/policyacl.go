@@ -4,7 +4,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/dkyanakiev/vaulty/internal/models"
+	"github.com/sikalabsx/v7y/internal/models"
 )
 
 func (w *Watcher) SubscribeToPoliciesACL(notify func()) {

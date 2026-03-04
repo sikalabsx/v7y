@@ -5,9 +5,9 @@ import (
 
 	"github.com/rivo/tview"
 
-	"github.com/dkyanakiev/vaulty/internal/state"
-	"github.com/dkyanakiev/vaulty/tui/primitives"
-	"github.com/dkyanakiev/vaulty/tui/styles"
+	"github.com/sikalabsx/v7y/internal/state"
+	"github.com/sikalabsx/v7y/tui/primitives"
+	"github.com/sikalabsx/v7y/tui/styles"
 )
 
 var (

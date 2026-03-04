@@ -3,12 +3,12 @@ package component_test
 import (
 	"testing"
 
-	"github.com/dkyanakiev/vaulty/internal/models"
-	"github.com/dkyanakiev/vaulty/tui/component"
-	"github.com/dkyanakiev/vaulty/tui/component/componentfakes"
-	"github.com/dkyanakiev/vaulty/tui/styles"
 	"github.com/gdamore/tcell/v2"
 	"github.com/rivo/tview"
+	"github.com/sikalabsx/v7y/internal/models"
+	"github.com/sikalabsx/v7y/tui/component"
+	"github.com/sikalabsx/v7y/tui/component/componentfakes"
+	"github.com/sikalabsx/v7y/tui/styles"
 	"github.com/stretchr/testify/require"
 )
 

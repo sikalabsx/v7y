@@ -11,9 +11,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/dkyanakiev/vaulty/internal/models"
 	"github.com/hashicorp/vault/api"
 	"github.com/mitchellh/mapstructure"
+	"github.com/sikalabsx/v7y/internal/models"
 )
 
 func (v *Vault) ListSecrets(path string) (*api.Secret, error) {

@@ -3,9 +3,9 @@ package view
 import (
 	"regexp"
 
-	"github.com/dkyanakiev/vaulty/tui/component"
 	"github.com/gdamore/tcell/v2"
 	"github.com/rivo/tview"
+	"github.com/sikalabsx/v7y/tui/component"
 )
 
 func (v *View) VPolicy() {
